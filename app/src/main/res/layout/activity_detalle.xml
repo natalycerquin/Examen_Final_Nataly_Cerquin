@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".detalleActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <EditText
+            android:id="@+id/nombre"
+            android:hint="nombre"
+            android:layout_marginTop="10dp"
+            android:enabled="false"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/monto"
+            android:hint="monto"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:layout_width="match_parent"
+            android:enabled="false"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/fecha_creacion"
+            android:hint="fecha_creacion"
+            android:layout_marginTop="10dp"
+            android:textColor="@color/black"
+            android:enabled="false"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/sucursal_1"
+            android:hint="sucursal_1"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="19sp"
+            android:layout_width="match_parent"
+
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/sucursal_2"
+            android:hint="sucursal_2"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="19sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <TextView
+            android:id="@+id/sucursal_3"
+            android:hint="sucursal_3"
+            android:textColor="@color/black"
+            android:layout_marginTop="10dp"
+            android:textSize="19sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <ImageView
+            android:id="@+id/imagen"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:src="@drawable/ic_baseline_add_a_photo_24"
+            android:layout_height="200dp"/>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

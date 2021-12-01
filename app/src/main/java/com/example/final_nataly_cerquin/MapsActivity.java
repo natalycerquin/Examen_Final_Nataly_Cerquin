@@ -3,16 +3,22 @@ package com.example.final_nataly_cerquin;
 import androidx.fragment.app.FragmentActivity;
 
 import android.os.Bundle;
+import android.util.Log;
 
+import com.example.final_nataly_cerquin.databinding.ActivityMapsBinding;
 import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
-import com.example.final_nataly_cerquin.databinding.ActivityMapsBinding;
+
+
 
 public class MapsActivity extends FragmentActivity implements OnMapReadyCallback {
+
+    String latitude;
+    String longitude;
 
     private GoogleMap mMap;
     private ActivityMapsBinding binding;
@@ -23,6 +29,14 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
 
         binding = ActivityMapsBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+
+        String cordena = getIntent().getStringExtra("cordena");
+
+        String[] parStrings = cordena.split(",");
+        Log.e("corr",parStrings[0]);
+        latitude = parStrings[0];
+        longitude = parStrings[1];
+
 
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
@@ -44,8 +58,9 @@ public class MapsActivity extends FragmentActivity implements OnMapReadyCallback
         mMap = googleMap;
 
         // Add a marker in Sydney and move the camera
-        LatLng sydney = new LatLng(-34, 151);
-        mMap.addMarker(new MarkerOptions().position(sydney).title("Marker in Sydney"));
+        LatLng sydney = new LatLng(Float.parseFloat(latitude), Float.parseFloat(longitude));
+        mMap.addMarker(new MarkerOptions().position(sydney).title("Sucursal"));
+        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sydney,14));
         mMap.moveCamera(CameraUpdateFactory.newLatLng(sydney));
     }
 }
