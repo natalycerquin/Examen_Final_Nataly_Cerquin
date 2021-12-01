@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Final_Nataly_Cerquin.iml" filepath="$PROJECT_DIR$/.idea/modules/Final_Nataly_Cerquin.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Final_Nataly_Cerquin.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Final_Nataly_Cerquin.app.iml" />
+    </modules>
+  </component>
+</project>
